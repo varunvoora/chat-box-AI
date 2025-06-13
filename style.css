@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #e0f7ff; /* Light blue background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: #a4a4e633 0px 7px 29px 0px; /* Shadow remains same */
+  background: #2196f3; /* Changed to blue */
+}
+
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e3a59;
+  margin-bottom: 20px;
+}
+
+.chat {
+  height: 400px;
+  overflow-y: scroll;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid #b0d9e7; /* Updated border color */
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.bot {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.user .avatar {
+  order: 2;
+  background-image: url("avatar.jpg");
+}
+
+.bot .avatar {
+  order: 1;
+  background-image: url("bot.jpg");
+}
+
+.text {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2c3e50;
+  word-wrap: break-word;
+}
+
+.user .text {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.bot .text {
+  background: #e0f7fa;
+  color: #004d40;
+}
+
+/* Input and Button Inline Styling */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 55px 12px 16px;
+  border: 2px solid #b0d9e7; /* Updated border */
+  border-radius: 8px;
+  outline: none;
+  font-size: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: #64b5f6;
+}
+
+.button {
+  position: absolute;
+  width: 80px;
+  border: none;
+  padding: 1px;
+  background: #42a5f5;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.01rem;
+  margin-left: -4.1rem;
+  outline: none;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 10px #42a5f5;
+}
+
+button i {
+  font-size: 3rem;
+}
+
+.chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+  background: #b0d9e7;
+  border-radius: 8px;
+}
